@@ -111,6 +111,7 @@ impl ImageLink {
 
 /// Search html content for links to icons and return them
 fn analyze_content(content: &str) -> Result<Vec<String>, Box<dyn Error>> {
+    println!("lib.rs => Line 114 => content: {}",content);
     let mut reader = Reader::from_str(content);
     reader.trim_text(true);
     reader.check_end_names(false);
